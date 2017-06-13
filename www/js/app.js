@@ -335,7 +335,9 @@ var tpl = {
                 FMS.checkOnlineStatus();
                 FMS.loadCurrentDraft();
                 FMS.checkLoggedInStatus();
-                FMS.setupHelp();
+                if (!CONFIG.HELP_DISABLED) {
+                    FMS.setupHelp();
+                }
 
                 Backbone.history.start();
                 if ( navigator && navigator.splashscreen ) {
@@ -343,7 +345,9 @@ var tpl = {
                 } else {
                     $('#load-screen').hide();
                 }
-                $('#display-help').show();
+                if (!CONFIG.HELP_DISABLED) {
+                    $('#display-help').show();
+                }
             });
         }
     });
