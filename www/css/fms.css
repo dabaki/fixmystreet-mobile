@@ -953,3 +953,7 @@
         top: 5px;
         right: 5px;
     }
+
+    .ui-content.hidden {
+        visibility: hidden;
+    }
